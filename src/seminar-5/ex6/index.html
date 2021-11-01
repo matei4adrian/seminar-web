@@ -1,0 +1,36 @@
+<html>
+  <head></head>
+
+  <div>
+    <form>
+      <input id="inputName" type="text" /> <br /><br />
+      <input id="inputAge" type="number" /> <br /><br />
+      <input
+        id="submitData"
+        value="Submit"
+        onclick="sendData()"
+        type="button"
+      />
+      <br /><br />
+    </form>
+  </div>
+  <form>
+    <input id="inputId" type="number" /> <br /><br />
+    <input
+      id="submitData"
+      value="Get by id"
+      onclick="getData()"
+      type="button"
+    />
+    <br /><br />
+  </form>
+  <div id="elForId"></div>
+  <br />
+
+  <body>
+    <div id="tableData"></div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+  <script src="index.js"></script>
+</html>

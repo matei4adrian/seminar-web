@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <script>
+      window.onload = () => {
+        var form = document.getElementById("form");
+        const agendaForm = document.getElementById("agendaForm");
+
+        var formSubmitHandler = (e) => {
+          e.preventDefault();
+          var list = document.getElementById("todo");
+          var task = document.getElementById("task");
+          var taskTxt = task.value;
+
+          var listItem = document.createElement("li");
+
+          listItem.innerHTML = taskTxt;
+
+          list.appendChild(listItem);
+          task.value = "";
+        };
+
+        const agendaFormSubmitHandler = (e) => {
+          e.preventDefault();
+          var table = document.getElementById("table");
+          var nume = document.getElementById("nume");
+          var telefon = document.getElementById("telefon");
+          var numeTxt = nume.value;
+          var telefonTxt = telefon.value;
+
+          var tr = document.createElement("tr");
+          var tdNume = document.createElement("td");
+          var tdTelefon = document.createElement("td");
+
+          tdNume.innerHTML = numeTxt;
+          tdTelefon.innerHTML = telefonTxt;
+
+          tr.appendChild(tdNume);
+          tr.appendChild(tdTelefon);
+          table.appendChild(tr);
+          nume.value = "";
+          telefon.value = "";
+        };
+
+        form.onsubmit = formSubmitHandler;
+        agendaForm.onsubmit = agendaFormSubmitHandler;
+      };
+    </script>
+  </head>
+  <body>
+    <h1>To do:</h1>
+    <ul id="todo"></ul>
+    <h2>Add new task</h2>
+    <form id="form">
+      <input type="text" id="task" />
+      <button type="submit" id="submitBtn">Add</button>
+    </form>
+    <br /><br />
+
+    <h1>Agenda:</h1>
+    <h2>Add new contact</h2>
+    <form id="agendaForm">
+      <label for="nume">Nume: </label><br />
+      <input type="text" id="nume" /><br />
+      <label for="telefon">Telefon: </label><br />
+      <input type="text" id="telefon" /><br />
+      <button type="submit" id="submitBtn">Add</button>
+    </form>
+
+    <table id="table">
+      <tr>
+        <th>Nume</th>
+        <th>Telefon</th>
+      </tr>
+    </table>
+  </body>
+</html>

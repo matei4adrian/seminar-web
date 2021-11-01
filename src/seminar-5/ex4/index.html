@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script>
+      window.onload = () => {
+        const button = document.getElementById("myBtn");
+        const div = document.getElementById("myDiv");
+        const myEvent = new Event("myEvt");
+        const myEvent1 = new Event("myEvt1");
+
+        const clickHandler = () => {
+          document.dispatchEvent(myEvent);
+        };
+
+        const mouseOverHandler = () => {
+          document.dispatchEvent(myEvent1);
+        };
+
+        const mouseOutHandler = () => {
+          div.style.color = "black";
+        };
+
+        const myEvtHandler = () => {
+          console.log("Butonul a fost apasat");
+        };
+
+        const myEvt1Handler = () => {
+          div.style.color = "red";
+        };
+
+        // poti pune doar o functie sa asculte
+        // button.onclick = clickHandler;
+        // poti pune mai multe functii sa asculte
+        button.addEventListener("click", clickHandler);
+        div.addEventListener("mouseover", mouseOverHandler);
+        div.addEventListener("mouseout", mouseOutHandler);
+        document.addEventListener("myEvt", myEvtHandler);
+        document.addEventListener("myEvt1", myEvt1Handler);
+      };
+    </script>
+  </head>
+  <body>
+    <button id="myBtn">Click me!</button>
+    <div id="myDiv">Apasa ca sa schimba culoarea</div>
+  </body>
+</html>
