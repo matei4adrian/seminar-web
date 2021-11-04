@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .sidebar {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        .main {
+            margin-left: 160px;
+            font-size: 28px;
+            padding: 0px 10px
+        }
+        .sidebar a {
+            padding: 6px 8px 6px 16px;
+            display: block;
+            text-decoration: none;
+            color: #818181;
+            font-size: 28px;
+        }
+        .sidebar a:hover {
+            color: #f1f1f1f1;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="main">
+      <h2>Sidebar Demo</h2>
+      <p>
+        <a name="about">About</a>
+        <div>
+            The article ran on Page 8-A as a sidebar to a story about hundreds of people auditioning to work as characters; Magic Kingdom was less than three months from its opening date.
+        </div>
+      </p>
+      <p>
+        <a name="services">Services</a>
+        <div>
+            St. Stephen's & St. Agnes School is an independent Episcopal coed private college preparatory school in Alexandria, Virginia. The school was created from the 1991 merger of St. Agnes School with St. Stephen's School. 
+        </div>
+      </p>
+      <p>
+        <a name="contact">Contact</a>
+        <div>
+            ceva
+        </div>
+      </p>
+    </div>
+  </body>
+</html>

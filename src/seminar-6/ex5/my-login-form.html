@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        padding: 16px;
+        background-color: rgb(231, 227, 227);
+        width: 30%;
+      }
+      input[type="text"],
+      input[type="password"],
+      select,
+      textarea {
+        width: 100%;
+        display: inline-block;
+        margin: 8px 0px;
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      button {
+        background-color: #04aa6d;
+        color: #fff;
+        padding: 14px 20px;
+        margin: 8px 0px;
+        border: none;
+        cursor: pointer;
+        width: 20%;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Contact Form</h2>
+    <form>
+      <div class="container">
+        <label for="firstName">First Name</label>
+        <input
+          type="text"
+          placeholder="Your name..."
+          name="firstName"
+          required
+        />
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          placeholder="Your last name..."
+          name="lastName"
+          required
+        />
+        <label for="country">Country</label>
+        <select name="country" name="country" required>
+          <option value="hungary">Hungary</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea
+          name="subject"
+          placeholder="Write something..."
+          cols="40"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </body>
+</html>
