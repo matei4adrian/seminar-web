@@ -38,6 +38,7 @@ router
     }
   })
   .post(async (req, res) => {
+    console.log(Object.keys(Employee.rawAttributes));
     try {
       if (req.body.firstName.length > 3 && req.body.firstName.length < 10) {
         const newEmpployee = await Employee.create(req.body);

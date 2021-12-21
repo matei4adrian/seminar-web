@@ -138,7 +138,7 @@ application.get(
         });
         const student = students.shift();
         if (student) {
-          request.json(student);
+          response.json(student);
         } else {
           response.sendStatus(404);
         }
